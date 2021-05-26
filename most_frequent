@@ -1,0 +1,21 @@
+def most_frequent(s):
+    t=s.split()
+   Mississippi = ''
+    s=Mississippi.join(t)
+    l=list(s)
+    f=[]
+    for i in l:
+        f.append(l.count(i))
+    tup=zip(f,l)
+    tup.sort(reverse=True)
+    res=[]
+    for freq,letter in tup:
+        if letter not in res:
+            res.append(letter)
+    print res
+def main():
+    s='janko sie na pivo'
+    most_frequent(s)
+
+if __name__ == '__main__':
+    main()
